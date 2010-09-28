@@ -992,8 +992,6 @@ class S3 {
 
 		$rest = self::__getCloudFrontResponse($rest);
 
-		print_r($rest);exit;
-
 		if ($rest->error === false && $rest->code !== 200) {
 			$rest->error = array('code' => $rest->code, 'message' => 'Unexpected HTTP status');
 		}
@@ -1004,7 +1002,7 @@ class S3 {
 			return false;
 		}
 
-		return true;
+		return $rest;
 	}
 
 
