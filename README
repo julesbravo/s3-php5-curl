@@ -80,7 +80,7 @@ Delete a bucket:
 INVALIDATE
 
 Invalidate a path:
-	S3::invalidate($distributionId, $path);
+	$s3->invalidate($distributionId, $path);
 
 KNOWN ISSUES
 
